@@ -1,42 +1,121 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Center Container */
+.center-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+/* App Heading */
+.app-heading {
+  color: #316fc1;
   text-align: center;
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Input Container */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Input Box */
+.input-box-todo {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input-box-todo:focus {
+  border-color: #316fc1;
+  box-shadow: 0 0 8px rgba(49, 111, 193, 0.2);
 }
 
-.card {
-  padding: 2em;
+/* Add Button */
+.add-btn {
+  padding: 12px;
+  background-color: #316fc1;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.add-btn:hover {
+  background-color: #255a9b;
+  box-shadow: 0 4px 12px rgba(49, 111, 193, 0.3);
+}
+
+.add-btn:active {
+  box-shadow: none;
+}
+
+/* List Container */
+.list-container {
+  margin-top: 10px;
+}
+
+/* List Item */
+.list-item {
+  background-color: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.list-item:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+/* Delete Icon */
+.icons i {
+  color: #ff5c5c;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.1s ease;
+  font-size: 20px;
+}
+
+.icons i:hover {
+  color: #ff1c1c;
+  transform: scale(1.1);
 }
