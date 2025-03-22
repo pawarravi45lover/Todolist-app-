@@ -6,7 +6,7 @@ function Todolist(props) {
         {props.item}
         <span className='icons'>
         <i className="fa-solid fa-trash-can icon-delete" 
-        onClick={e=>{
+        onClick={ ()=>{
             props.deleteItem(props.index)
         }}></i>
         </span>
